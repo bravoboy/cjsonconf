@@ -294,15 +294,6 @@ int cjsonconf_getarraysize(cjsonconf *object) {
     }
     return res; 
 }
-int cjsonconf_getarraysize(cjsonconf *object) {
-    int res = 0;
-    cjsonconf *c = object->child;
-    while(c) {
-        res++;
-        c = c->next;
-    }   
-    return res; 
-}
 
 cjsonconf *cjsonconf_getarrayitem(cjsonconf *object,int item) {
     int res = 0;
